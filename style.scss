@@ -1,0 +1,843 @@
+/*Colors*/
+//primary
+$dark-blue: hsl(243, 87%, 12%);
+$desaturated-blue: hsl(238, 22%, 44%);
+//accent
+$bright-blue: hsl(224, 93%, 58%);
+$cyan: hsl(170, 45%, 43%);
+//Neutral
+$grayish-blue: hsl(240, 75%, 98%);
+$light-gray: hsl(0, 0%, 75%);
+
+/*Font styling*/
+//weights
+$normal : 400;
+$bold : 700;
+//font-family
+//Headings, Call-to-actions, Header Navigation
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+$head-nav-link: Raleway;
+//body
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$body: "Open Sans";
+
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $body;
+    font-weight: $normal;
+    resize: both;
+}
+*{
+    box-sizing: border-box;
+    resize: both;
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+.main-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 700px 200px 750px 300px 500px;
+    grid-template-areas: "nav-bar" "legend" "back" "productive" "sign-up" "footer";
+    nav, section, footer{
+        padding: 50px 5%;
+    }
+    .nav-bar{
+        grid-area: nav-bar;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul{
+            list-style: none;
+            li{
+                display: inline;
+                margin-left: 1.5em;
+                a{
+                    text-decoration: none;
+                    color: $dark-blue;
+                    font-family: $head-nav-link;
+                    font-weight: $bold;
+                }
+            }
+        }
+    }
+    .legend{
+        grid-area: legend;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+        color: $dark-blue;
+        .intro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            h1{
+                font-weight: $body;
+                font-family: $head-nav-link;
+                font-size: 50px;
+                line-height: 1.5;
+            }
+            p{
+                line-height: 1.5;
+                font-size: 25px;
+            }
+            input{
+                width: 60%;
+                height: 60px;
+                border: 1px solid $desaturated-blue;
+                border-radius: 5px;
+                padding-left: 10px;
+            }
+            button{
+                width: 30%;
+                height: 60px;
+                background-color: $bright-blue;
+                color: white;
+                font-weight: $head-nav-link;
+                font-size: 18px;
+                font-weight: $bold;
+                border-radius: 5px;
+                border: 1px solid $bright-blue;
+                margin-left: 10px;
+                cursor: pointer;
+                
+                &:focus, &:hover{
+                    background-color: hsl(224, 93%, 68%);
+                    border: 1px solid hsl(224, 93%, 68%);
+                }
+            }
+        }
+        .image-wrapper{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .back{
+        padding-bottom: 0;
+        background-image: url(images/bg-curve-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+    .productive{
+        grid-area: productive;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        background-color: $grayish-blue;
+        color: $dark-blue;
+        .productive-text{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            header{
+                height: 60%;
+                h2{
+                    margin-bottom: 30px;
+                    font-size: 50px;
+                }
+                p{
+                    margin-top: 20px;
+                    width: 80%;
+                    max-width: 100%;
+                    line-height: 2;
+                    a{
+                        color: $cyan;
+                        img{
+                            vertical-align: middle;
+
+                            &:hover, &:focus{
+                                opacity: 0.7;
+                            }
+                        }
+                        &:hover, &:focus{
+                            color: hsl(170, 45%, 53%);
+                        }
+                    }
+                }
+            }
+            .testimonial{
+                border-radius: 10px;
+                padding: 20px 50px;
+                background-color: white;
+                box-shadow: 3px 3px 15px 4px $light-gray;
+                width: 60%;
+                height: 35%;
+                background-image: url(images/icon-quotes.svg);
+                background-repeat: no-repeat;
+                background-position:50px 15px;
+                background-size: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                div{
+                    width: 100%;
+                    display: flex;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                    p{
+                        font-weight: $bold;
+                        span{
+                            font-size: 12px;
+                            font-weight: $normal;
+                        }
+                    }
+                }
+            }
+        }
+        .image-wrapper{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .sign-up{
+        grid-area: sign-up;
+        background: $desaturated-blue;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .signup-text{
+            width: 40%;
+            h3{
+                font-size: 40px;
+                font-family: $head-nav-link;
+                font-weight: $bold;
+                
+            }
+            p{
+                line-height: 2;
+                font-size: 18px;
+            }
+        }
+        .form-wrapper{
+            width: 40%;
+            input{
+                height: 60px;
+                width: 90%;
+                border-radius: 5px;
+                border: 1px solid $desaturated-blue ;
+                margin-bottom: 30px;
+                padding-left: 10px;
+            }
+            button{
+                width: 40%;
+                height: 60px;
+                font-size: 18px;
+                font-family: $head-nav-link;
+                font-weight: $bold;
+                color: white;
+                background-color: $bright-blue;
+                border-radius: 5px;
+                border: 1px solid $bright-blue;
+                cursor: pointer;
+
+                &:focus, &:hover{
+                    background-color: hsl(224, 93%, 68%);
+                    border: 1px solid hsl(224, 93%, 68%);
+                }
+            }
+
+        }
+    }
+    .footer{
+        grid-area: footer;
+        background-color: $dark-blue;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .attribution {
+            text-align: center;
+            margin-top: 30px;
+          }
+          .attribution a {
+            color: $cyan;
+          }
+        p{
+            svg{
+                fill: white;
+            }
+        }
+        .footer-wrapper{
+            display: flex;
+            justify-content: space-between;
+            div{
+                width: 45%;
+                display: flex;
+                justify-content: space-between;
+                ul{
+                    list-style: none;
+                    width: 50%;
+                    li{
+                        line-height: 3;
+                        list-style-position: inside;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            &:hover{
+                                color: $bright-blue;
+                            }
+                        }
+                    }
+                    .call{
+                        list-style-image: url(images/icon-phone.svg);
+                    }
+                    .mail{
+                        list-style-image: url(images/icon-email.svg);
+                    }  
+                }
+                .socials{
+                    text-align: center;
+                    li{
+                        display: inline;
+                        word-spacing: 1.5em;
+                        a{
+                            padding: 10px 15px;
+                            border: 1px solid white;
+                            border-radius: 50%;
+                            &:hover{
+                                border: 1px solid $bright-blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1280px){
+    .main-wrapper{
+        grid-template-rows: 100px 800px 100px 1300px 400px 700px;
+        nav, section, footer{
+            padding: 50px 4%;
+        }
+        
+        // .legend{
+        //     flex-direction: column-reverse;
+        //     .intro{
+        //         width: 100%;
+        //         height: 40%;
+        //         justify-content: space-evenly;
+        //         h1{
+        //             font-size: 40px;
+        //             text-align: center;
+        //         }
+        //         p{
+        //             text-align: center;
+        //             font-size: 16px;
+        //             margin-top: 20px;
+        //         }
+        //         input{
+        //             width: 100%;
+        //             height: 50px;
+        //             margin-top: 20px;
+        //         }
+        //         button{
+        //             width: 100%;
+        //             margin:10px 0 0 0;
+        //             height: 50px;
+        //             font-size: 16px;
+        //             font-weight: $normal;
+        //         }
+        //     }
+        //     .image-wrapper{
+        //         width: 100%;
+        //         height: 60%;
+        //     }
+        // }
+        .productive{
+            flex-direction: column-reverse;
+            .productive-text{
+                width: 100%;
+                height: 40%;
+                header{
+                    width: 100%;
+                    h2{
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                    .work-link{
+                        text-align: center;
+                    }
+                }
+                .testimonial{
+                    width: 100%;
+                    background-position: 0 10px;
+                    padding: 20px 30px;
+                }
+            }
+            .image-wrapper{
+                width: 100%;
+                height: 60%;
+            }
+        }
+        .sign-up{
+            text-align: center;
+            .signup-text{
+                font-size: 16px;
+                width: 100%;
+                h3{
+                    font-size: 25px;
+                }
+            }
+            .form-wrapper{
+                width: 100%;
+                input{
+                    height: 40px;
+                    margin-bottom: 10px;
+                }
+                button{
+                    height: 40px;
+                    width: 90%;
+                    font-weight: $normal;
+                    font-size: 16px;
+                }
+            }
+        }
+        .footer{
+            .attribution{
+                font-size: 14px;
+            }
+            font-size: 16px;
+            .footer-wrapper{
+                flex-direction: column;
+                height: 80%;
+                div{
+                    flex-direction: column;
+                    width: 100%;
+                    height: 40%;
+                    
+                    ul{
+                        width: 100%;
+                        height: 45%;
+                        li{
+                            line-height: 2;
+                        }
+                    }
+                    .socials{
+                        word-spacing: 1em;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 980px){
+    .main-wrapper{
+        grid-template-rows: 100px 1200px 100px 1300px 400px 700px;
+        nav, section, footer{
+            padding: 50px 4%;
+        }
+        
+        .legend{
+            flex-direction: column-reverse;
+            .intro{
+                width: 100%;
+                height: 40%;
+                justify-content: space-evenly;
+                h1{
+                    font-size: 40px;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+                input{
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 20px;
+                }
+                button{
+                    width: 100%;
+                    margin:10px 0 0 0;
+                    height: 50px;
+                    font-size: 16px;
+                    font-weight: $normal;
+                }
+            }
+            .image-wrapper{
+                width: 100%;
+                height: 60%;
+            }
+        }
+        .productive{
+            flex-direction: column-reverse;
+            .productive-text{
+                width: 100%;
+                height: 40%;
+                header{
+                    width: 100%;
+                    h2{
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                    .work-link{
+                        text-align: center;
+                    }
+                }
+                .testimonial{
+                    width: 100%;
+                    background-position: 0 10px;
+                    padding: 20px 30px;
+                }
+            }
+            .image-wrapper{
+                width: 100%;
+                height: 60%;
+            }
+        }
+        .sign-up{
+            text-align: center;
+            .signup-text{
+                font-size: 16px;
+                width: 100%;
+                h3{
+                    font-size: 25px;
+                }
+            }
+            .form-wrapper{
+                width: 100%;
+                input{
+                    height: 40px;
+                    margin-bottom: 10px;
+                }
+                button{
+                    height: 40px;
+                    width: 90%;
+                    font-weight: $normal;
+                    font-size: 16px;
+                }
+            }
+        }
+        .footer{
+            .attribution{
+                font-size: 14px;
+            }
+            font-size: 16px;
+            .footer-wrapper{
+                flex-direction: column;
+                height: 80%;
+                div{
+                    flex-direction: column;
+                    width: 100%;
+                    height: 40%;
+                    
+                    ul{
+                        width: 100%;
+                        height: 45%;
+                        li{
+                            line-height: 2;
+                        }
+                    }
+                    .socials{
+                        word-spacing: 1em;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 736px){
+    .main-wrapper{
+        grid-template-rows: 100px 950px 100px 1200px 500px 700px;
+        nav, section, footer{
+            padding: 50px 3%;
+        }
+        .nav-bar{
+            img{
+                width: 30%;
+            }
+            ul{
+                li{
+                    margin-left: 0.3em;
+                    a{
+                        font-size: 14px;
+                        font-weight: $normal;
+                    }
+                }
+            }
+        }
+        .legend{
+            flex-direction: column-reverse;
+            .intro{
+                width: 100%;
+                height: 40%;
+                justify-content: space-evenly;
+                h1{
+                    font-size: 30px;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+                input{
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 20px;
+                }
+                button{
+                    width: 100%;
+                    margin:10px 0 0 0;
+                    height: 40px;
+                    font-size: 16px;
+                    font-weight: $normal;
+                }
+            }
+            .image-wrapper{
+                width: 100%;
+                height: 60%;
+            }
+        }
+        .back{
+            background-image: url(images/bg-curve-mobile.svg);
+        }
+        .productive{
+            flex-direction: column-reverse;
+            .productive-text{
+                width: 100%;
+                height: 50%;
+                header{
+                    width: 100%;
+                    h2{
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                    .work-link{
+                        text-align: center;
+                    }
+                }
+                .testimonial{
+                    width: 100%;
+                    background-position: 0 10px;
+                    padding: 20px 30px;
+                }
+            }
+            .image-wrapper{
+                width: 100%;
+                height: 50%;
+            }
+        }
+        .sign-up{
+            text-align: center;
+            .signup-text{
+                font-size: 16px;
+                width: 100%;
+                h3{
+                    font-size: 20px;
+                }
+            }
+            .form-wrapper{
+                width: 100%;
+                input{
+                    height: 40px;
+                    margin-bottom: 10px;
+                }
+                button{
+                    height: 40px;
+                    width: 90%;
+                    font-weight: $normal;
+                    font-size: 16px;
+                }
+            }
+        }
+        .footer{
+            .attribution{
+                font-size: 14px;
+            }
+            font-size: 16px;
+            .footer-wrapper{
+                flex-direction: column;
+                height: 80%;
+                div{
+                    flex-direction: column;
+                    width: 100%;
+                    height: 40%;
+                    
+                    ul{
+                        width: 100%;
+                        height: 45%;
+                        li{
+                            line-height: 2;
+                        }
+                    }
+                    .socials{
+                        word-spacing: 1em;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .main-wrapper{
+        grid-template-rows: 100px 800px 100px 1000px 500px 700px;
+        nav, section, footer{
+            padding: 50px 3%;
+        }
+        .nav-bar{
+            img{
+                width: 30%;
+            }
+            ul{
+                li{
+                    margin-left: 0.3em;
+                    a{
+                        font-size: 14px;
+                        font-weight: $normal;
+                    }
+                }
+            }
+        }
+        .legend{
+            flex-direction: column-reverse;
+            .intro{
+                width: 100%;
+                height: 50%;
+                justify-content: space-evenly;
+                h1{
+                    font-size: 30px;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+                input{
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 20px;
+                }
+                button{
+                    width: 100%;
+                    margin:10px 0 0 0;
+                    height: 40px;
+                    font-size: 16px;
+                    font-weight: $normal;
+                }
+            }
+            .image-wrapper{
+                width: 100%;
+                height: 50%;
+            }
+        }
+        .back{
+            background-image: url(images/bg-curve-mobile.svg);
+        }
+        .productive{
+            flex-direction: column-reverse;
+            .productive-text{
+                width: 100%;
+                height: 60%;
+                header{
+                    width: 100%;
+                    h2{
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                    .work-link{
+                        text-align: center;
+                    }
+                }
+                .testimonial{
+                    width: 100%;
+                    background-position: 0 10px;
+                    padding: 20px 30px;
+                }
+            }
+            .image-wrapper{
+                width: 100%;
+            }
+        }
+        .sign-up{
+            text-align: center;
+            .signup-text{
+                font-size: 16px;
+                width: 100%;
+                h3{
+                    font-size: 20px;
+                }
+            }
+            .form-wrapper{
+                width: 100%;
+                input{
+                    height: 40px;
+                    margin-bottom: 10px;
+                }
+                button{
+                    height: 40px;
+                    width: 90%;
+                    font-weight: $normal;
+                    font-size: 16px;
+                }
+            }
+        }
+        .footer{
+            .attribution{
+                font-size: 14px;
+            }
+            font-size: 16px;
+            .footer-wrapper{
+                flex-direction: column;
+                height: 80%;
+                div{
+                    flex-direction: column;
+                    width: 100%;
+                    height: 40%;
+                    
+                    ul{
+                        width: 100%;
+                        height: 45%;
+                        li{
+                            line-height: 2;
+                        }
+                    }
+                    .socials{
+                        word-spacing: 1em;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
