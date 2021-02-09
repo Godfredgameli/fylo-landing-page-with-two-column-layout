@@ -25,34 +25,28 @@ body, html {
   grid-template-rows: 150px 700px 200px 750px 300px 500px;
   grid-template-areas: "nav-bar" "legend" "back" "productive" "sign-up" "footer";
 }
-
 .main-wrapper nav, .main-wrapper section, .main-wrapper footer {
   padding: 50px 5%;
 }
-
 .main-wrapper .nav-bar {
   grid-area: nav-bar;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .main-wrapper .nav-bar ul {
   list-style: none;
 }
-
 .main-wrapper .nav-bar ul li {
   display: inline;
   margin-left: 1.5em;
 }
-
 .main-wrapper .nav-bar ul li a {
   text-decoration: none;
   color: #070439;
   font-family: Raleway;
   font-weight: 700;
 }
-
 .main-wrapper .legend {
   grid-area: legend;
   display: flex;
@@ -61,26 +55,22 @@ body, html {
   justify-content: space-between;
   color: #070439;
 }
-
 .main-wrapper .legend .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
 }
-
 .main-wrapper .legend .intro h1 {
   font-weight: "Open Sans";
   font-family: Raleway;
   font-size: 50px;
   line-height: 1.5;
 }
-
 .main-wrapper .legend .intro p {
   line-height: 1.5;
   font-size: 25px;
 }
-
 .main-wrapper .legend .intro input {
   width: 60%;
   height: 60px;
@@ -88,7 +78,6 @@ body, html {
   border-radius: 5px;
   padding-left: 10px;
 }
-
 .main-wrapper .legend .intro button {
   width: 30%;
   height: 60px;
@@ -102,20 +91,16 @@ body, html {
   margin-left: 10px;
   cursor: pointer;
 }
-
 .main-wrapper .legend .intro button:focus, .main-wrapper .legend .intro button:hover {
   background-color: #628af9;
   border: 1px solid #628af9;
 }
-
 .main-wrapper .legend .image-wrapper {
   width: 50%;
 }
-
 .main-wrapper .legend .image-wrapper img {
   width: 100%;
 }
-
 .main-wrapper .back {
   padding-bottom: 0;
   background-image: url(images/bg-curve-desktop.svg);
@@ -123,7 +108,6 @@ body, html {
   background-size: contain;
   background-position: bottom;
 }
-
 .main-wrapper .productive {
   grid-area: productive;
   display: flex;
@@ -133,46 +117,37 @@ body, html {
   background-color: #f6f6fe;
   color: #070439;
 }
-
 .main-wrapper .productive .productive-text {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .main-wrapper .productive .productive-text header {
   height: 60%;
 }
-
 .main-wrapper .productive .productive-text header h2 {
   margin-bottom: 30px;
   font-size: 50px;
 }
-
 .main-wrapper .productive .productive-text header p {
   margin-top: 20px;
   width: 80%;
   max-width: 100%;
   line-height: 2;
 }
-
 .main-wrapper .productive .productive-text header p a {
   color: #3c9f8f;
 }
-
 .main-wrapper .productive .productive-text header p a img {
   vertical-align: middle;
 }
-
 .main-wrapper .productive .productive-text header p a img:hover, .main-wrapper .productive .productive-text header p a img:focus {
   opacity: 0.7;
 }
-
 .main-wrapper .productive .productive-text header p a:hover, .main-wrapper .productive .productive-text header p a:focus {
   color: #51bdab;
 }
-
 .main-wrapper .productive .productive-text .testimonial {
   border-radius: 10px;
   padding: 20px 50px;
@@ -182,42 +157,35 @@ body, html {
   height: 35%;
   background-image: url(images/icon-quotes.svg);
   background-repeat: no-repeat;
-  background-position: 50px 15px;
+  background-position: 20px 15px;
   background-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-
 .main-wrapper .productive .productive-text .testimonial div {
   width: 100%;
   display: flex;
 }
-
 .main-wrapper .productive .productive-text .testimonial div img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .main-wrapper .productive .productive-text .testimonial div p {
   font-weight: 700;
 }
-
 .main-wrapper .productive .productive-text .testimonial div p span {
   font-size: 12px;
   font-weight: 400;
 }
-
 .main-wrapper .productive .image-wrapper {
   width: 50%;
 }
-
 .main-wrapper .productive .image-wrapper img {
   width: 100%;
 }
-
 .main-wrapper .sign-up {
   grid-area: sign-up;
   background: #585989;
@@ -227,26 +195,21 @@ body, html {
   justify-content: space-between;
   align-items: center;
 }
-
 .main-wrapper .sign-up .signup-text {
   width: 40%;
 }
-
 .main-wrapper .sign-up .signup-text h3 {
   font-size: 40px;
   font-family: Raleway;
   font-weight: 700;
 }
-
 .main-wrapper .sign-up .signup-text p {
   line-height: 2;
   font-size: 18px;
 }
-
 .main-wrapper .sign-up .form-wrapper {
   width: 40%;
 }
-
 .main-wrapper .sign-up .form-wrapper input {
   height: 60px;
   width: 90%;
@@ -255,7 +218,6 @@ body, html {
   margin-bottom: 30px;
   padding-left: 10px;
 }
-
 .main-wrapper .sign-up .form-wrapper button {
   width: 40%;
   height: 60px;
@@ -268,12 +230,10 @@ body, html {
   border: 1px solid #3065f8;
   cursor: pointer;
 }
-
 .main-wrapper .sign-up .form-wrapper button:focus, .main-wrapper .sign-up .form-wrapper button:hover {
   background-color: #628af9;
   border: 1px solid #628af9;
 }
-
 .main-wrapper .footer {
   grid-area: footer;
   background-color: #070439;
@@ -282,73 +242,58 @@ body, html {
   flex-direction: column;
   justify-content: flex-end;
 }
-
 .main-wrapper .footer .attribution {
   text-align: center;
   margin-top: 30px;
 }
-
 .main-wrapper .footer .attribution a {
   color: #3c9f8f;
 }
-
 .main-wrapper .footer p svg {
   fill: white;
 }
-
 .main-wrapper .footer .footer-wrapper {
   display: flex;
   justify-content: space-between;
 }
-
 .main-wrapper .footer .footer-wrapper div {
   width: 45%;
   display: flex;
   justify-content: space-between;
 }
-
 .main-wrapper .footer .footer-wrapper div ul {
   list-style: none;
   width: 50%;
 }
-
 .main-wrapper .footer .footer-wrapper div ul li {
   line-height: 3;
   list-style-position: inside;
 }
-
 .main-wrapper .footer .footer-wrapper div ul li a {
   color: white;
   text-decoration: none;
 }
-
 .main-wrapper .footer .footer-wrapper div ul li a:hover {
   color: #3065f8;
 }
-
 .main-wrapper .footer .footer-wrapper div ul .call {
   list-style-image: url(images/icon-phone.svg);
 }
-
 .main-wrapper .footer .footer-wrapper div ul .mail {
   list-style-image: url(images/icon-email.svg);
 }
-
 .main-wrapper .footer .footer-wrapper div .socials {
   text-align: center;
 }
-
 .main-wrapper .footer .footer-wrapper div .socials li {
   display: inline;
   word-spacing: 1.5em;
 }
-
 .main-wrapper .footer .footer-wrapper div .socials li a {
   padding: 10px 15px;
   border: 1px solid white;
   border-radius: 50%;
 }
-
 .main-wrapper .footer .footer-wrapper div .socials li a:hover {
   border: 1px solid #3065f8;
 }
@@ -437,7 +382,6 @@ body, html {
     margin-top: 50px;
   }
 }
-
 @media screen and (max-width: 980px) {
   .main-wrapper {
     grid-template-rows: 100px 1200px 100px 1300px 400px 700px;
@@ -560,7 +504,6 @@ body, html {
     margin-top: 50px;
   }
 }
-
 @media screen and (max-width: 736px) {
   .main-wrapper {
     grid-template-rows: 100px 950px 100px 1200px 500px 700px;
@@ -695,7 +638,6 @@ body, html {
     margin-top: 50px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .main-wrapper {
     grid-template-rows: 100px 800px 100px 1000px 500px 700px;
@@ -830,4 +772,3 @@ body, html {
     margin-top: 50px;
   }
 }
-/*# sourceMappingURL=style.css.map */
