@@ -302,7 +302,7 @@ body, html {
 }
 
 .main-wrapper .footer .footer-wrapper div {
-  width: 45%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
